@@ -348,7 +348,7 @@ const AnimatedLogo = () => {
         <img
           src="/logo.png"
           alt="Plexura"
-          className="relative h-[72px] w-auto drop-shadow-[0_16px_40px_rgba(16,185,129,0.2)]"
+          className="relative h-10 w-auto object-contain sm:h-[72px] drop-shadow-[0_16px_40px_rgba(16,185,129,0.2)]"
         />
       </motion.div>
       <div className="leading-tight">
