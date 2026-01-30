@@ -100,8 +100,7 @@ const SectionTitle = ({ eyebrow, title, subtitle }) => (
         transition={{ duration: 0.5, delay: 0.1 }}
       >
         <Sparkles className="h-4 w-4 text-emerald-300/80" />
-        <span className="text-xs font-medium tracking-wide text-emerald-200/80">{eyebrow}</span>
-      </motion.div>
+<span className="text-base font-medium tracking-wide text-emerald-200/80">{eyebrow}</span>      </motion.div>
     ) : null}
     <h2 className="text-balance text-2xl font-semibold tracking-tight text-white sm:text-3xl">{title}</h2>
     {subtitle ? (
@@ -347,7 +346,7 @@ const AnimatedLogo = () => {
           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
         />
         <img
-          src="/logo-png.png"
+          src="/logo.png"
           alt="Plexura"
           className="relative h-[72px] w-auto drop-shadow-[0_16px_40px_rgba(16,185,129,0.2)]"
         />
@@ -367,7 +366,7 @@ const AnimatedLogo = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
         >
-          Digital Marketing • Web • Dev
+          Digital Marketing • Web Design • Brand Strategy
         </motion.div>
       </div>
     </motion.div>
@@ -713,8 +712,8 @@ export default function PlexuraPlumbingMarketingLanding() {
         <Container>
           <SectionTitle
             eyebrow="What we do"
-            title="Everything a plumbing business needs to get found and convert"
-            subtitle="Productized services with high-end creative, tight execution, and tracking so you can measure what's working."
+            title="Get you found. Get you more calls. Get you booked."
+            subtitle="A complete marketing system designed to turn searches into paying customers."
           />
 
           <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
@@ -730,8 +729,8 @@ export default function PlexuraPlumbingMarketingLanding() {
         <Container>
           <SectionTitle
             eyebrow="Simple packages"
-            title="Start small, then scale into a full growth system"
-            subtitle="You can sell these as fixed offers on cold calls. Swap pricing to match your market."
+            title="Packages that grow with your business"
+            subtitle=""
           />
 
           <div className="mt-10 grid gap-5 lg:grid-cols-3">
@@ -761,7 +760,7 @@ export default function PlexuraPlumbingMarketingLanding() {
                 <div className="mt-5 space-y-2 text-sm text-white/75">
                   {[
                     "GBP optimization (monthly updates)",
-                    "8 campaign-quality posts / month",
+                    "4 campaign-quality posts / month",
                     "Review request system setup",
                     "Monthly performance snapshot",
                   ].map((t, i) => (
@@ -813,14 +812,14 @@ export default function PlexuraPlumbingMarketingLanding() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.4, delay: 0.2 }}
                   >
-                    $1,499 <span className="text-sm font-medium text-white/60">/mo</span>
+                    $999 <span className="text-sm font-medium text-white/60">/mo</span>
                   </motion.div>
                   <div className="mt-1 text-sm text-white/70">For plumbers running promos & needing lead capture.</div>
 
                   <div className="mt-5 space-y-2 text-sm text-white/75">
                     {[
                       "Everything in Foundation",
-                      "12 posts / month + 2 premium creatives",
+                      "8 posts / month + 2 premium creatives",
                       "1 conversion landing page (initial build)",
                       "GA4 + UTMs + lead event tracking",
                       "Monthly strategy + reporting call",
@@ -844,7 +843,7 @@ export default function PlexuraPlumbingMarketingLanding() {
                   </AnimatedButton>
 
                   <div className="mt-4 text-xs text-white/55">
-                    Tip: sell as "marketing + creative + tracking" in one package.
+                   
                   </div>
                 </div>
               </Card>
@@ -869,7 +868,7 @@ export default function PlexuraPlumbingMarketingLanding() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: 0.2 }}
                 >
-                  $2,999 <span className="text-sm font-medium text-white/60">/mo</span>
+                  $1,999 <span className="text-sm font-medium text-white/60">/mo</span>
                 </motion.div>
                 <div className="mt-1 text-sm text-white/70">For multi-service or multi-location plumbing brands.</div>
 
@@ -919,8 +918,8 @@ export default function PlexuraPlumbingMarketingLanding() {
         <Container>
           <SectionTitle
             eyebrow="How it works"
-            title="A tight process that looks enterprise and delivers fast"
-            subtitle="This is what you tell plumbers on calls: clear steps, fast turnaround, measurable outputs."
+            title="Here's exactly how it works"
+            subtitle="A clear process from day one — fast turnaround, real results, and full visibility into what's working."
           />
 
           <div className="mt-10 grid gap-5 lg:grid-cols-12">
@@ -1021,7 +1020,7 @@ export default function PlexuraPlumbingMarketingLanding() {
           <SectionTitle
             eyebrow="Objections handled"
             title="FAQ"
-            subtitle="Keep it confident. Don't overpromise — show process, quality, and tracking."
+            subtitle="Everything you need to know before getting started."
           />
 
           <div className="mt-10 grid gap-4 lg:grid-cols-2">
@@ -1050,137 +1049,183 @@ export default function PlexuraPlumbingMarketingLanding() {
       </section>
 
       {/* CONTACT */}
-      <section id="contact" className="relative py-16">
-        <Container>
-          <SectionTitle
-            eyebrow="Let's talk"
-            title="Get a quote for plumbing growth"
-            subtitle="Replace the placeholders with your Plexura phone/email. Connect the form to your backend (Formspree, Next API route, etc.)."
-          />
+<section id="contact" className="relative py-16">
+  <Container>
+    <SectionTitle
+      eyebrow="Let's talk"
+      title="Request a Quote Now!"
+      subtitle="Free, no-obligation quote tailored to your business."
+    />
 
-          <div className="mt-10 grid gap-5 lg:grid-cols-12">
+    <div className="mt-10 grid gap-5 lg:grid-cols-12">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+        className="lg:col-span-7"
+      >
+        <Card className="p-6" hover={false}>
+          <form action="https://formspree.io/f/mnjvlgjw" method="POST">
+            <div className="grid gap-4 sm:grid-cols-2">
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: 0 }}
+              >
+                <label className="text-xs text-white/60">Name</label>
+                <input
+                  name="name"
+                  required
+                  className="mt-2 w-full rounded-2xl border border-white/10 bg-black/40 px-4 py-3 text-sm text-white placeholder:text-white/30 outline-none transition-all focus:border-emerald-300/40 focus:ring-2 focus:ring-emerald-400/10"
+                  placeholder="Your name"
+                />
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: 0.08 }}
+              >
+                <label className="text-xs text-white/60">Business</label>
+                <input
+                  name="business"
+                  required
+                  className="mt-2 w-full rounded-2xl border border-white/10 bg-black/40 px-4 py-3 text-sm text-white placeholder:text-white/30 outline-none transition-all focus:border-emerald-300/40 focus:ring-2 focus:ring-emerald-400/10"
+                  placeholder="Plumbing company"
+                />
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: 0.16 }}
+              >
+                <label className="text-xs text-white/60">Phone</label>
+                <input
+                  name="phone"
+                  type="tel"
+                  required
+                  className="mt-2 w-full rounded-2xl border border-white/10 bg-black/40 px-4 py-3 text-sm text-white placeholder:text-white/30 outline-none transition-all focus:border-emerald-300/40 focus:ring-2 focus:ring-emerald-400/10"
+                  placeholder="(###) ###-####"
+                />
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: 0.24 }}
+              >
+                <label className="text-xs text-white/60">Email</label>
+                <input
+                  name="email"
+                  type="email"
+                  required
+                  className="mt-2 w-full rounded-2xl border border-white/10 bg-black/40 px-4 py-3 text-sm text-white placeholder:text-white/30 outline-none transition-all focus:border-emerald-300/40 focus:ring-2 focus:ring-emerald-400/10"
+                  placeholder="you@company.com"
+                />
+              </motion.div>
+            </div>
+
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              className="mt-4"
+              initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-              className="lg:col-span-7"
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: 0.35 }}
             >
-              <Card className="p-6" hover={false}>
-                <div className="grid gap-4 sm:grid-cols-2">
-                  {[
-                    { label: "Name", placeholder: "Your name" },
-                    { label: "Business", placeholder: "Plumbing company" },
-                    { label: "Phone", placeholder: "(###) ###-####" },
-                    { label: "Email", placeholder: "you@company.com" },
-                  ].map((field, i) => (
-                    <motion.div 
-                      key={field.label}
-                      initial={{ opacity: 0, y: 10 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.4, delay: i * 0.08 }}
-                    >
-                      <label className="text-xs text-white/60">{field.label}</label>
-                      <input
-                        className="mt-2 w-full rounded-2xl border border-white/10 bg-black/40 px-4 py-3 text-sm text-white placeholder:text-white/30 outline-none transition-all focus:border-emerald-300/40 focus:ring-2 focus:ring-emerald-400/10"
-                        placeholder={field.placeholder}
-                      />
-                    </motion.div>
-                  ))}
-                </div>
-
-                <motion.div 
-                  className="mt-4"
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: 0.35 }}
-                >
-                  <label className="text-xs text-white/60">What do you want more of?</label>
-                  <textarea
-                    rows={4}
-                    className="mt-2 w-full resize-none rounded-2xl border border-white/10 bg-black/40 px-4 py-3 text-sm text-white placeholder:text-white/30 outline-none transition-all focus:border-emerald-300/40 focus:ring-2 focus:ring-emerald-400/10"
-                    placeholder="Example: more calls from Google Maps + consistent social proof + a landing page for drain cleaning..."
-                  />
-                </motion.div>
-
-                <AnimatedButton href="#" className="mt-5 w-full">
-                  Request pricing <ArrowRight className="h-4 w-4" />
-                </AnimatedButton>
-
-                <div className="mt-3 text-xs text-white/55">
-                  This template is UI-only. Hook up your preferred form backend when deploying.
-                </div>
-              </Card>
+              <label className="text-xs text-white/60">What do you want more of?</label>
+              <textarea
+                name="message"
+                rows={4}
+                className="mt-2 w-full resize-none rounded-2xl border border-white/10 bg-black/40 px-4 py-3 text-sm text-white placeholder:text-white/30 outline-none transition-all focus:border-emerald-300/40 focus:ring-2 focus:ring-emerald-400/10"
+                placeholder="Example: more calls from Google Maps + consistent social proof + a landing page for drain cleaning..."
+              />
             </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.6, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-              className="lg:col-span-5"
+            <button
+              type="submit"
+              className="mt-5 w-full inline-flex items-center justify-center gap-2 rounded-full bg-emerald-500 px-6 py-3 text-sm font-medium text-white transition-all hover:bg-emerald-400"
             >
-              <Card className="p-6">
-                <div className="text-sm font-semibold">Direct contact</div>
-                <div className="mt-3 space-y-3 text-sm text-white/75">
-                  {[
-                    { icon: Phone, text: "Replace: (###) ###-####" },
-                    { icon: MapPin, text: "Las Vegas • Utah • Remote" },
-                    { icon: BadgeCheck, text: "Design + marketing execution" },
-                  ].map((item, i) => (
-                    <motion.div 
-                      key={item.text}
-                      className="flex items-center gap-2"
-                      initial={{ opacity: 0, x: 10 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.3, delay: 0.3 + i * 0.1 }}
-                    >
-                      <item.icon className="h-4 w-4 text-emerald-200/90" />
-                      <span>{item.text}</span>
-                    </motion.div>
-                  ))}
-                </div>
+              Request pricing <ArrowRight className="h-4 w-4" />
+            </button>
+          </form>
 
-                <motion.div 
-                  className="mt-6 rounded-3xl border border-white/10 bg-black/30 p-5"
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: 0.4 }}
-                >
-                  <div className="text-sm font-semibold">What we'll send back</div>
-                  <div className="mt-3 space-y-2 text-sm text-white/75">
-                    {[
-                      "A quick audit snapshot (GBP + site + social)",
-                      "A recommended package + timeline",
-                      "Optional: a preview concept for your offer",
-                    ].map((t, i) => (
-                      <motion.div 
-                        key={t} 
-                        className="flex items-start gap-2"
-                        initial={{ opacity: 0, x: -10 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.3, delay: 0.5 + i * 0.1 }}
-                      >
-                        <Check className="mt-0.5 h-4 w-4 text-emerald-200/90" />
-                        <span>{t}</span>
-                      </motion.div>
-                    ))}
-                  </div>
-                </motion.div>
-
-                <div className="mt-6 text-xs text-white/55">
-                  Host suggestion: <span className="text-white/70">plumbing.plexura.net</span>
-                </div>
-              </Card>
-            </motion.div>
+          <div className="mt-3 text-xs text-white/55">
           </div>
-        </Container>
-      </section>
+        </Card>
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.6, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+        className="lg:col-span-5"
+      >
+        <Card className="p-6">
+          <div className="text-sm font-semibold">Direct contact</div>
+          <div className="mt-3 space-y-3 text-sm text-white/75">
+            {[
+              { icon: Phone, text: "Phone: (801) 347-8072" },
+              { icon: MapPin, text: "Las Vegas • Utah • Remote" },
+              { icon: BadgeCheck, text: "Design + marketing execution" },
+            ].map((item, i) => (
+              <motion.div 
+                key={item.text}
+                className="flex items-center gap-2"
+                initial={{ opacity: 0, x: 10 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.3, delay: 0.3 + i * 0.1 }}
+              >
+                <item.icon className="h-4 w-4 text-emerald-200/90" />
+                <span>{item.text}</span>
+              </motion.div>
+            ))}
+          </div>
+
+          <motion.div 
+            className="mt-6 rounded-3xl border border-white/10 bg-black/30 p-5"
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+          >
+            <div className="text-sm font-semibold">What we'll send back</div>
+            <div className="mt-3 space-y-2 text-sm text-white/75">
+              {[
+                "A quick audit snapshot (GBP + site + social)",
+                "A recommended package + timeline",
+                "Optional: a preview concept for your offer",
+              ].map((t, i) => (
+                <motion.div 
+                  key={t} 
+                  className="flex items-start gap-2"
+                  initial={{ opacity: 0, x: -10 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.3, delay: 0.5 + i * 0.1 }}
+                >
+                  <Check className="mt-0.5 h-4 w-4 text-emerald-200/90" />
+                  <span>{t}</span>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+
+          <div className="mt-6 text-xs text-white/55">
+            
+          </div>
+        </Card>
+      </motion.div>
+    </div>
+  </Container>
+</section>
 
       {/* FOOTER */}
       <footer className="relative border-t border-white/10 bg-black py-10">
@@ -1205,7 +1250,7 @@ export default function PlexuraPlumbingMarketingLanding() {
           >
             <div className="flex items-center gap-3">
               <motion.img 
-                src="/logo-png.png" 
+                src="/logo.png" 
                 alt="Plexura" 
                 className="h-16 w-auto opacity-90"
                 whileHover={{ scale: 1.05 }}
@@ -1231,7 +1276,7 @@ export default function PlexuraPlumbingMarketingLanding() {
           <Container className="py-3">
             <div className="flex gap-3">
               <motion.a
-                href="tel:+10000000000"
+                href="tel:+18013478072"
                 className="inline-flex flex-1 items-center justify-center gap-2 rounded-2xl border border-white/10 bg-white/[0.04] px-4 py-3 text-sm font-semibold text-white/90"
                 whileHover={{ backgroundColor: "rgba(255,255,255,0.08)" }}
                 whileTap={{ scale: 0.98 }}
